@@ -1,0 +1,4 @@
+axe-selenium-python
+openai
+azure-storage-blob
+python-dotenv
