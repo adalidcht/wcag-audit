@@ -1,0 +1,924 @@
+{
+    "url": "https://www.gob.mx/",
+    "violations": [
+        {
+            "description": "Ensures role attribute has an appropriate value for the element",
+            "help": "ARIA role must be appropriate for the element",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/3.1/aria-allowed-role?application=axeAPI",
+            "id": "aria-allowed-role",
+            "impact": "minor",
+            "nodes": [
+                {
+                    "all": [],
+                    "any": [
+                        {
+                            "data": [
+                                "presentation"
+                            ],
+                            "id": "aria-allowed-role",
+                            "impact": "minor",
+                            "message": "role presentation  is not allowed for given element",
+                            "relatedNodes": []
+                        }
+                    ],
+                    "failureSummary": "Fix any of the following:\n  role presentation  is not allowed for given element",
+                    "html": "<iframe src=\"javascript:void(0)\" title=\"\" role=\"presentation\" style=\"width: 0px; height: 0px; border: 0px; display: none;\"></iframe>",
+                    "impact": "minor",
+                    "none": [],
+                    "target": [
+                        "iframe"
+                    ]
+                }
+            ],
+            "tags": [
+                "cat.aria",
+                "best-practice"
+            ]
+        },
+        {
+            "description": "Ensures every id attribute value of active elements is unique",
+            "help": "IDs of active elements must be unique",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/3.1/duplicate-id-active?application=axeAPI",
+            "id": "duplicate-id-active",
+            "impact": "serious",
+            "nodes": [
+                {
+                    "all": [],
+                    "any": [
+                        {
+                            "data": "INAI",
+                            "id": "duplicate-id-active",
+                            "impact": "serious",
+                            "message": "Document has active elements with the same id attribute: INAI",
+                            "relatedNodes": [
+                                {
+                                    "html": "<a data-v-6b1f797a=\"\" id=\"INAI\" href=\"http://alertadores.funcionpublica.gob.mx/\" target=\"_blank\" rel=\"alertadores\" class=\"footer\">Alerta</a>",
+                                    "target": [
+                                        "a[rel=\"alertadores\"]"
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "failureSummary": "Fix any of the following:\n  Document has active elements with the same id attribute: INAI",
+                    "html": "<a data-v-6b1f797a=\"\" href=\"http://www.inai.org.mx/\" id=\"INAI\" target=\"blank\" title=\"Enlace abre sitio INAI en ventana nueva\" class=\"footer\">INAI</a>",
+                    "impact": "serious",
+                    "none": [],
+                    "target": [
+                        "a[href$=\"inai.org.mx/\"]"
+                    ]
+                }
+            ],
+            "tags": [
+                "cat.parsing",
+                "wcag2a",
+                "wcag411"
+            ]
+        },
+        {
+            "description": "Ensures every id attribute value is unique",
+            "help": "id attribute value must be unique",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/3.1/duplicate-id?application=axeAPI",
+            "id": "duplicate-id",
+            "impact": "minor",
+            "nodes": [
+                {
+                    "all": [],
+                    "any": [
+                        {
+                            "data": "glit",
+                            "id": "duplicate-id",
+                            "impact": "minor",
+                            "message": "Document has multiple static elements with the same id attribute",
+                            "relatedNodes": [
+                                {
+                                    "html": "<div data-v-7f4dda58=\"\" id=\"glit\" class=\"container\">",
+                                    "target": [
+                                        ".container:nth-child(4)"
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "failureSummary": "Fix any of the following:\n  Document has multiple static elements with the same id attribute",
+                    "html": "<div data-v-7f4dda58=\"\" id=\"glit\" class=\"container\"><h3 data-v-7f4dda58=\"\">Lo m\u00e1s buscado:</h3><div data-v-7f4dda58=\"\" id=\"line\"></div></div>",
+                    "impact": "minor",
+                    "none": [],
+                    "target": [
+                        ".container:nth-child(3)"
+                    ]
+                },
+                {
+                    "all": [],
+                    "any": [
+                        {
+                            "data": "line",
+                            "id": "duplicate-id",
+                            "impact": "minor",
+                            "message": "Document has multiple static elements with the same id attribute",
+                            "relatedNodes": [
+                                {
+                                    "html": "<div data-v-7f4dda58=\"\" id=\"line\"></div>",
+                                    "target": [
+                                        ".container:nth-child(4) > div:nth-child(3)"
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "failureSummary": "Fix any of the following:\n  Document has multiple static elements with the same id attribute",
+                    "html": "<div data-v-7f4dda58=\"\" id=\"line\"></div>",
+                    "impact": "minor",
+                    "none": [],
+                    "target": [
+                        ".container:nth-child(3) > div"
+                    ]
+                }
+            ],
+            "tags": [
+                "cat.parsing",
+                "wcag2a",
+                "wcag411"
+            ]
+        },
+        {
+            "description": "Ensures the order of headings is semantically correct",
+            "help": "Heading levels should only increase by one",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/3.1/heading-order?application=axeAPI",
+            "id": "heading-order",
+            "impact": "moderate",
+            "nodes": [
+                {
+                    "all": [],
+                    "any": [
+                        {
+                            "data": 3,
+                            "id": "heading-order",
+                            "impact": "moderate",
+                            "message": "Heading order invalid",
+                            "relatedNodes": []
+                        }
+                    ],
+                    "failureSummary": "Fix any of the following:\n  Heading order invalid",
+                    "html": "<h3 data-v-7f4dda58=\"\">Lo m\u00e1s buscado:</h3>",
+                    "impact": "moderate",
+                    "none": [],
+                    "target": [
+                        ".container:nth-child(3) > h3"
+                    ]
+                },
+                {
+                    "all": [],
+                    "any": [
+                        {
+                            "data": 6,
+                            "id": "heading-order",
+                            "impact": "moderate",
+                            "message": "Heading order invalid",
+                            "relatedNodes": []
+                        }
+                    ],
+                    "failureSummary": "Fix any of the following:\n  Heading order invalid",
+                    "html": "<h6 data-v-6b1f797a=\"\"><a data-v-6b1f797a=\"\" href=\"https://www.gob.mx/tramites/ficha/presentacion-de-quejas-y-denuncias-en-la-sfp/SFP54\"><u data-v-6b1f797a=\"\">Denuncia\n                            contra servidores p\u00fablicos</u></a></h6>",
+                    "impact": "moderate",
+                    "none": [],
+                    "target": [
+                        "h6"
+                    ]
+                }
+            ],
+            "tags": [
+                "cat.semantics",
+                "best-practice"
+            ]
+        },
+        {
+            "description": "Ensures the page has only one main landmark and each iframe in the page has at most one main landmark",
+            "help": "Page must have one main landmark",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/3.1/landmark-one-main?application=axeAPI",
+            "id": "landmark-one-main",
+            "impact": "moderate",
+            "nodes": [
+                {
+                    "all": [
+                        {
+                            "data": null,
+                            "id": "page-has-main",
+                            "impact": "moderate",
+                            "message": "Page does not have a main landmark",
+                            "relatedNodes": []
+                        }
+                    ],
+                    "any": [],
+                    "failureSummary": "Fix all of the following:\n  Page does not have a main landmark",
+                    "html": "<html lang=\"en\">",
+                    "impact": "moderate",
+                    "none": [],
+                    "target": [
+                        "html"
+                    ]
+                }
+            ],
+            "tags": [
+                "cat.semantics",
+                "best-practice"
+            ]
+        },
+        {
+            "description": "Ensures links have discernible text",
+            "help": "Links must have discernible text",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/3.1/link-name?application=axeAPI",
+            "id": "link-name",
+            "impact": "serious",
+            "nodes": [
+                {
+                    "all": [],
+                    "any": [
+                        {
+                            "data": null,
+                            "id": "has-visible-text",
+                            "impact": "minor",
+                            "message": "Element does not have text that is visible to screen readers",
+                            "relatedNodes": []
+                        },
+                        {
+                            "data": null,
+                            "id": "aria-label",
+                            "impact": "serious",
+                            "message": "aria-label attribute does not exist or is empty",
+                            "relatedNodes": []
+                        },
+                        {
+                            "data": null,
+                            "id": "aria-labelledby",
+                            "impact": "serious",
+                            "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty",
+                            "relatedNodes": []
+                        },
+                        {
+                            "data": null,
+                            "id": "role-presentation",
+                            "impact": "minor",
+                            "message": "Element's default semantics were not overridden with role=\"presentation\"",
+                            "relatedNodes": []
+                        },
+                        {
+                            "data": null,
+                            "id": "role-none",
+                            "impact": "minor",
+                            "message": "Element's default semantics were not overridden with role=\"none\"",
+                            "relatedNodes": []
+                        }
+                    ],
+                    "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element's default semantics were not overridden with role=\"presentation\"\n  Element's default semantics were not overridden with role=\"none\"",
+                    "html": "<a data-v-7f4dda58=\"\" href=\"https://www.gob.mx/presidencia\" target=\"on_blank\">",
+                    "impact": "serious",
+                    "none": [
+                        {
+                            "data": null,
+                            "id": "focusable-no-name",
+                            "impact": "serious",
+                            "message": "Element is in tab order and does not have accessible text",
+                            "relatedNodes": []
+                        }
+                    ],
+                    "target": [
+                        "a[target=\"on_blank\"]"
+                    ]
+                }
+            ],
+            "tags": [
+                "cat.name-role-value",
+                "wcag2a",
+                "wcag412",
+                "wcag244",
+                "section508",
+                "section508.22.a"
+            ]
+        },
+        {
+            "description": "Ensures that lists are structured correctly",
+            "help": "<ul> and <ol> must only directly contain <li>, <script> or <template> elements",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/3.1/list?application=axeAPI",
+            "id": "list",
+            "impact": "serious",
+            "nodes": [
+                {
+                    "all": [],
+                    "any": [],
+                    "failureSummary": "Fix all of the following:\n  List element has direct children that are not allowed inside <li> elements",
+                    "html": "<ul data-v-6e6caf84=\"\" class=\"navbar-nav\">",
+                    "impact": "serious",
+                    "none": [
+                        {
+                            "data": null,
+                            "id": "only-listitems",
+                            "impact": "serious",
+                            "message": "List element has direct children that are not allowed inside <li> elements",
+                            "relatedNodes": [
+                                {
+                                    "html": "<button data-v-6e6caf84=\"\" id=\"botonbuscar\" type=\"button\" class=\"btn btn-default\"><a data-v-6e6caf84=\"\" href=\"https://www.gob.mx/busqueda?utf8=\u2713\" target=\"_blank\" id=\"botbusca\"><img data-v-6e6caf84=\"\" alt=\"Buscar\" src=\"https://framework-gb.cdn.gob.mx/landing/img/lupa.png\"></a></button>",
+                                    "target": [
+                                        "#botonbuscar"
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "target": [
+                        ".navbar-nav"
+                    ]
+                }
+            ],
+            "tags": [
+                "cat.structure",
+                "wcag2a",
+                "wcag131"
+            ]
+        },
+        {
+            "description": "Ensures all page content is contained by landmarks",
+            "help": "All page content must be contained by landmarks",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/3.1/region?application=axeAPI",
+            "id": "region",
+            "impact": "moderate",
+            "nodes": [
+                {
+                    "all": [],
+                    "any": [
+                        {
+                            "data": null,
+                            "id": "region",
+                            "impact": "moderate",
+                            "message": "Some page content is not contained by landmarks",
+                            "relatedNodes": [
+                                {
+                                    "html": "<h1 data-v-7f4dda58=\"\" class=\"elemento-oculto\">Portal del gobierno de M\u00e9xico </h1>",
+                                    "target": [
+                                        "h1"
+                                    ]
+                                },
+                                {
+                                    "html": "<img data-v-7f4dda58=\"\" src=\"https://framework-gb.cdn.gob.mx/landing/img/gmx-04.jpg\" alt=\"\" class=\"d-block w-100\">",
+                                    "target": [
+                                        ".d-block"
+                                    ]
+                                },
+                                {
+                                    "html": "<span data-v-7f4dda58=\"\" class=\"sr-only\">Previa</span>",
+                                    "target": [
+                                        ".carousel-control-prev > .sr-only"
+                                    ]
+                                },
+                                {
+                                    "html": "<span data-v-7f4dda58=\"\" class=\"sr-only\">Siguiente</span>",
+                                    "target": [
+                                        ".carousel-control-next > .sr-only"
+                                    ]
+                                },
+                                {
+                                    "html": "<h3 data-v-7f4dda58=\"\">Lo m\u00e1s buscado:</h3>",
+                                    "target": [
+                                        ".container:nth-child(3) > h3"
+                                    ]
+                                },
+                                {
+                                    "html": "<a data-v-7f4dda58=\"\" href=\"https://www.gob.mx/curp/\" role=\"button\" target=\"_blank\" class=\"btn btn-top-search\">CURP</a>",
+                                    "target": [
+                                        "a[href$=\"curp/\"]"
+                                    ]
+                                },
+                                {
+                                    "html": "<a data-v-7f4dda58=\"\" href=\"https://www.gob.mx/ActaNacimiento/\" role=\"button\" target=\"_blank\" class=\"btn btn-top-search\">Acta de nacimiento</a>",
+                                    "target": [
+                                        ".btn-top-search.btn[role=\"button\"]:nth-child(2)"
+                                    ]
+                                },
+                                {
+                                    "html": "<a data-v-7f4dda58=\"\" href=\"https://app.cfe.mx/Aplicaciones/CCFE/SolicitudesCFE/Solicitudes/ConsultaTuReciboLuzGmx.aspx\" role=\"button\" target=\"_blank\" class=\"btn btn-top-search\">Recibo de luz</a>",
+                                    "target": [
+                                        ".btn-top-search.btn[role=\"button\"]:nth-child(3)"
+                                    ]
+                                },
+                                {
+                                    "html": "<a data-v-7f4dda58=\"\" href=\"https://www.gob.mx/pasaporte\" role=\"button\" target=\"_blank\" class=\"btn btn-top-search\">Pasaporte</a>",
+                                    "target": [
+                                        ".btn-top-search[href$=\"pasaporte\"][role=\"button\"]"
+                                    ]
+                                },
+                                {
+                                    "html": "<a data-v-7f4dda58=\"\" href=\"https://www.gob.mx/cedulaprofesional\" role=\"button\" target=\"_blank\" class=\"btn btn-top-search\">C\u00e9dula profesional</a>",
+                                    "target": [
+                                        ".btn-top-search.btn[role=\"button\"]:nth-child(5)"
+                                    ]
+                                },
+                                {
+                                    "html": "<a data-v-7f4dda58=\"\" href=\"http://www.cre.gob.mx/ConsultaPrecios/GasolinasyDiesel/GasolinasyDiesel.html\" role=\"button\" target=\"_blank\" class=\"d-none d-sm-inline-block btn btn-top-search\">Precio de gasolina</a>",
+                                    "target": [
+                                        ".d-none"
+                                    ]
+                                },
+                                {
+                                    "html": "<h3 data-v-7f4dda58=\"\">Tr\u00e1mites por categor\u00eda</h3>",
+                                    "target": [
+                                        ".container:nth-child(4) > h3"
+                                    ]
+                                },
+                                {
+                                    "html": "<img data-v-7f4dda58=\"\" src=\"https://www.gob.mx/cms/uploads/image/file/487050/01_Identidad_dorado_2.png\" alt=\"\" class=\"card-img-top card-img-gob\">",
+                                    "target": [
+                                        "a[href$=\"identidad\"] > .card-img-top.card-img-gob[alt=\"\"]"
+                                    ]
+                                },
+                                {
+                                    "html": "<h4 data-v-7f4dda58=\"\" class=\"card-title\">\n                                    IDENTIDAD, PASAPORTE Y MIGRACI\u00d3N\n                                </h4>",
+                                    "target": [
+                                        "a[href$=\"identidad\"] > h4"
+                                    ]
+                                },
+                                {
+                                    "html": "<a data-v-7f4dda58=\"\" href=\"https://www.gob.mx/tramites/ficha/expedicion-de-la-copia-certificada-del-acta-de-nacimiento-en-linea/RENAPO187\" target=\"\u201d_blank\u201d\">Acta de nacimiento</a>",
+                                    "target": [
+                                        ".col-sm-6.col-md-6.col-lg-3:nth-child(1) > .card.text-center.card-gob > .card-body > .list-unstyled > li:nth-child(1) > a[target=\"\u201d_blank\u201d\"]"
+                                    ]
+                                },
+                                {
+                                    "html": "<a data-v-7f4dda58=\"\" href=\"https://www.gob.mx/tramites/ficha/consulta-e-impresion-de-la-curp/SEGOB175\" target=\"\u201d_blank\u201d\">CURP</a>",
+                                    "target": [
+                                        ".col-sm-6.col-md-6.col-lg-3:nth-child(1) > .card.text-center.card-gob > .card-body > .list-unstyled > li:nth-child(2) > a[target=\"\u201d_blank\u201d\"]"
+                                    ]
+                                },
+                                {
+                                    "html": "<a data-v-7f4dda58=\"\" href=\"https://www.gob.mx/tramites/ficha/reposicion-de-la-cartilla-de-identidad-del-servicio-militar-nacional/SEDENA38\" target=\"\u201d_blank\u201d\">Cartilla Militar</a>",
+                                    "target": [
+                                        ".col-sm-6.col-md-6.col-lg-3:nth-child(1) > .card.text-center.card-gob > .card-body > .list-unstyled > li:nth-child(3) > a[target=\"\u201d_blank\u201d\"]"
+                                    ]
+                                },
+                                {
+                                    "html": "<a data-v-7f4dda58=\"\" href=\"https://www.gob.mx/pasaporte\" target=\"\u201d_blank\u201d\">Pasaporte</a>",
+                                    "target": [
+                                        "a[href$=\"pasaporte\"][target=\"\u201d_blank\u201d\"]"
+                                    ]
+                                },
+                                {
+                                    "html": "<a data-v-7f4dda58=\"\" class=\"btn btn-categorias\">Ver todos &gt;</a>",
+                                    "target": [
+                                        "a[href$=\"identidad\"] > .btn-categorias.btn"
+                                    ]
+                                },
+                                {
+                                    "html": "<img data-v-7f4dda58=\"\" src=\"https://www.gob.mx/cms/uploads/image/file/487052/03_educacio_n-dorado.png\" alt=\"\" class=\"card-img-top card-img-gob\">",
+                                    "target": [
+                                        "a[href$=\"educacion\"] > .card-img-top.card-img-gob[alt=\"\"]"
+                                    ]
+                                },
+                                {
+                                    "html": "<h4 data-v-7f4dda58=\"\" class=\"card-title\">\n                                    EDUCACI\u00d3N\n                                </h4>",
+                                    "target": [
+                                        "a[href$=\"educacion\"] > h4"
+                                    ]
+                                },
+                                {
+                                    "html": "<a data-v-7f4dda58=\"\" href=\"https://www.gob.mx/tramites/ficha/expedicion-de-cedula-profesional-electronica/SEP6534\" target=\"\u201d_blank\u201d\">C\u00e9dula Profesional</a>",
+                                    "target": [
+                                        ".col-sm-6.col-md-6.col-lg-3:nth-child(2) > .card.text-center.card-gob > .card-body > .list-unstyled > li:nth-child(1) > a[target=\"\u201d_blank\u201d\"]"
+                                    ]
+                                },
+                                {
+                                    "html": "<a data-v-7f4dda58=\"\" href=\"https://www.gob.mx/tramites/ficha/duplicado-de-cedula-profesional/SEP67\" target=\"\u201d_blank\u201d\">Duplicado de C\u00e9dula</a>",
+                                    "target": [
+                                        ".col-sm-6.col-md-6.col-lg-3:nth-child(2) > .card.text-center.card-gob > .card-body > .list-unstyled > li:nth-child(2) > a[target=\"\u201d_blank\u201d\"]"
+                                    ]
+                                },
+                                {
+                                    "html": "<a data-v-7f4dda58=\"\" href=\"https://www.gob.mx/tramites/ficha/registrate-en-la-unadm/UNADM1064\" target=\"\u201d_blank\u201d\">Registro UNADM</a>",
+                                    "target": [
+                                        ".col-sm-6.col-md-6.col-lg-3:nth-child(2) > .card.text-center.card-gob > .card-body > .list-unstyled > li:nth-child(3) > a[target=\"\u201d_blank\u201d\"]"
+                                    ]
+                                },
+                                {
+                                    "html": "<a data-v-7f4dda58=\"\" href=\"https://www.gob.mx/tramites/ficha/inscripcion-a-escuelas-publicas-del-nivel-preescolar-primaria-y-secundaria-en-la-ciudad-de-mexico/AEFCM6305\" target=\"\u201d_blank\u201d\">Inscripciones AEFCM</a>",
+                                    "target": [
+                                        ".col-sm-6.col-md-6.col-lg-3:nth-child(2) > .card.text-center.card-gob > .card-body > .list-unstyled > li:nth-child(4) > a[target=\"\u201d_blank\u201d\"]"
+                                    ]
+                                },
+                                {
+                                    "html": "<a data-v-7f4dda58=\"\" class=\"btn btn-categorias\">Ver todos &gt;</a>",
+                                    "target": [
+                                        "a[href$=\"educacion\"] > .btn-categorias.btn"
+                                    ]
+                                },
+                                {
+                                    "html": "<img data-v-7f4dda58=\"\" src=\"https://www.gob.mx/cms/uploads/image/file/487053/04_energi_a-dorado.png\" alt=\"\" class=\"card-img-top card-img-gob\">",
+                                    "target": [
+                                        "a[href$=\"energia\"] > .card-img-top.card-img-gob[alt=\"\"]"
+                                    ]
+                                },
+                                {
+                                    "html": "<h4 data-v-7f4dda58=\"\" class=\"card-title\">\n                                    ENERG\u00cdA\n                                </h4>",
+                                    "target": [
+                                        "a[href$=\"energia\"] > h4"
+                                    ]
+                                },
+                                {
+                                    "html": "<a data-v-7f4dda58=\"\" href=\"https://www.gob.mx/tramites/ficha/solicitud-de-energia-electrica-para-casa-habitacion-pequenos-comercios-o-uso-general/CFE206\" target=\"\u201d_blank\u201d\">Solicitud de servicio</a>",
+                                    "target": [
+                                        ".col-sm-6.col-md-6.col-lg-3:nth-child(3) > .card.text-center.card-gob > .card-body > .list-unstyled > li:nth-child(1) > a[target=\"\u201d_blank\u201d\"]"
+                                    ]
+                                },
+                                {
+                                    "html": "<a data-v-7f4dda58=\"\" href=\"https://www.gob.mx/tramites/ficha/consulta-tu-recibo/CFE6855\" target=\"\u201d_blank\u201d\">Recibo</a>",
+                                    "target": [
+                                        ".col-sm-6.col-md-6.col-lg-3:nth-child(3) > .card.text-center.card-gob > .card-body > .list-unstyled > li:nth-child(2) > a[target=\"\u201d_blank\u201d\"]"
+                                    ]
+                                },
+                                {
+                                    "html": "<a data-v-7f4dda58=\"\" href=\"https://www.gob.mx/tramites/ficha/reporte-de-fallas-en-el-suministro-de-energia-electrica/CFE201\" target=\"\u201d_blank\u201d\">Fallas en el servicio</a>",
+                                    "target": [
+                                        ".col-sm-6.col-md-6.col-lg-3:nth-child(3) > .card.text-center.card-gob > .card-body > .list-unstyled > li:nth-child(3) > a[target=\"\u201d_blank\u201d\"]"
+                                    ]
+                                },
+                                {
+                                    "html": "<a data-v-7f4dda58=\"\" href=\"http://www.cre.gob.mx/ConsultaPrecios/GasolinasyDiesel/GasolinasyDiesel.html\" target=\"\u201d_blank\u201d\">Precio de gasolina</a>",
+                                    "target": [
+                                        ".col-sm-6.col-md-6.col-lg-3:nth-child(3) > .card.text-center.card-gob > .card-body > .list-unstyled > li:nth-child(4) > a[target=\"\u201d_blank\u201d\"]"
+                                    ]
+                                },
+                                {
+                                    "html": "<a data-v-7f4dda58=\"\" class=\"btn btn-categorias\">Ver todos &gt;</a>",
+                                    "target": [
+                                        "a[href$=\"energia\"] > .btn-categorias.btn"
+                                    ]
+                                },
+                                {
+                                    "html": "<img data-v-7f4dda58=\"\" src=\"https://www.gob.mx/cms/uploads/image/file/487054/05_trabajo-dorado.png\" alt=\"\" class=\"card-img-top card-img-gob\">",
+                                    "target": [
+                                        "a[href$=\"trabajo\"] > .card-img-top.card-img-gob[alt=\"\"]"
+                                    ]
+                                },
+                                {
+                                    "html": "<h4 data-v-7f4dda58=\"\" class=\"card-title\">\n                                    TRABAJO\n                                </h4>",
+                                    "target": [
+                                        "a[href$=\"trabajo\"] > h4"
+                                    ]
+                                },
+                                {
+                                    "html": "<a data-v-7f4dda58=\"\" href=\"https://www.gob.mx/empleo?tab=Busco%20empleo\" target=\"\u201d_blank\u201d\">Busca\n                                        empleo</a>",
+                                    "target": [
+                                        ".col-sm-6.col-md-6.col-lg-3:nth-child(4) > .card.text-center.card-gob > .card-body > .list-unstyled > li:nth-child(1) > a[target=\"\u201d_blank\u201d\"]"
+                                    ]
+                                },
+                                {
+                                    "html": "<a data-v-7f4dda58=\"\" href=\"https://www.gob.mx/tramites/ficha/asignacion-o-localizacion-del-numero-de-seguridad-social/IMSS164\" target=\"\u201d_blank\u201d\">Consulta de NSS</a>",
+                                    "target": [
+                                        ".col-sm-6.col-md-6.col-lg-3:nth-child(4) > .card.text-center.card-gob > .card-body > .list-unstyled > li:nth-child(2) > a[target=\"\u201d_blank\u201d\"]"
+                                    ]
+                                },
+                                {
+                                    "html": "<a data-v-7f4dda58=\"\" href=\"https://www.gob.mx/tramites/ficha/consulta-en-linea-el-saldo-de-tu-prestamo-del-issste/ISSSTE818\" target=\"\u201d_blank\u201d\">Saldo de pr\u00e9stamo ISSSTE</a>",
+                                    "target": [
+                                        ".col-sm-6.col-md-6.col-lg-3:nth-child(4) > .card.text-center.card-gob > .card-body > .list-unstyled > li:nth-child(3) > a[target=\"\u201d_blank\u201d\"]"
+                                    ]
+                                },
+                                {
+                                    "html": "<a data-v-7f4dda58=\"\" href=\"https://www.gob.mx/tramites/ficha/constancia-de-semanas-reconocidas-en-el-imss/IMSS166\" target=\"\u201d_blank\u201d\">Semanas cotizadas IMSS</a>",
+                                    "target": [
+                                        ".col-sm-6.col-md-6.col-lg-3:nth-child(4) > .card.text-center.card-gob > .card-body > .list-unstyled > li:nth-child(4) > a[target=\"\u201d_blank\u201d\"]"
+                                    ]
+                                },
+                                {
+                                    "html": "<a data-v-7f4dda58=\"\" class=\"btn btn-categorias\">Ver todos &gt;</a>",
+                                    "target": [
+                                        "a[href$=\"trabajo\"] > .btn-categorias.btn"
+                                    ]
+                                },
+                                {
+                                    "html": "<img data-v-7f4dda58=\"\" src=\"https://www.gob.mx/cms/uploads/image/file/487055/06_impuestos-y-contribuciones-dorado.png\" alt=\"\" class=\"card-img-top card-img-gob\">",
+                                    "target": [
+                                        "a[href$=\"impuestos\"] > .card-img-top.card-img-gob[alt=\"\"]"
+                                    ]
+                                },
+                                {
+                                    "html": "<h4 data-v-7f4dda58=\"\" class=\"card-title\">\n                                    IMPUESTOS Y CONTRIBUCIONES\n                                </h4>",
+                                    "target": [
+                                        "a[href$=\"impuestos\"] > h4"
+                                    ]
+                                },
+                                {
+                                    "html": "<a data-v-7f4dda58=\"\" href=\"https://www.gob.mx/tramites/ficha/obtencion-de-e-firma/SAT137\" target=\"\u201d_blank\u201d\">e.firma</a>",
+                                    "target": [
+                                        ".col-sm-6.col-md-6.col-lg-3:nth-child(5) > .card.text-center.card-gob > .card-body > .list-unstyled > li:nth-child(1) > a[target=\"\u201d_blank\u201d\"]"
+                                    ]
+                                },
+                                {
+                                    "html": "<a data-v-7f4dda58=\"\" href=\"https://www.gob.mx/tramites/ficha/inscripcion-en-el-rfc-de-personas-fisicas-menores-de-edad-a-partir-de-los-16-anos/SAT134\" target=\"\u201d_blank\u201d\">Inscripci\u00f3n al RFC</a>",
+                                    "target": [
+                                        ".col-sm-6.col-md-6.col-lg-3:nth-child(5) > .card.text-center.card-gob > .card-body > .list-unstyled > li:nth-child(2) > a[target=\"\u201d_blank\u201d\"]"
+                                    ]
+                                },
+                                {
+                                    "html": "<a data-v-7f4dda58=\"\" href=\"https://www.gob.mx/tramites/ficha/generacion-de-factura-electronica/SAT2289\" target=\"\u201d_blank\u201d\">Factura electr\u00f3nica</a>",
+                                    "target": [
+                                        ".col-sm-6.col-md-6.col-lg-3:nth-child(5) > .card.text-center.card-gob > .card-body > .list-unstyled > li:nth-child(3) > a[target=\"\u201d_blank\u201d\"]"
+                                    ]
+                                },
+                                {
+                                    "html": "<a data-v-7f4dda58=\"\" href=\"https://www.gob.mx/tramites/ficha/solicitud-de-saldos-a-favor-de-isr/SAT2298\" target=\"\u201d_blank\u201d\">Saldos a favor ISR</a>",
+                                    "target": [
+                                        ".col-sm-6.col-md-6.col-lg-3:nth-child(5) > .card.text-center.card-gob > .card-body > .list-unstyled > li:nth-child(4) > a[target=\"\u201d_blank\u201d\"]"
+                                    ]
+                                },
+                                {
+                                    "html": "<a data-v-7f4dda58=\"\" class=\"btn btn-categorias\">Ver todos &gt;</a>",
+                                    "target": [
+                                        "a[href$=\"impuestos\"] > .btn-categorias.btn"
+                                    ]
+                                },
+                                {
+                                    "html": "<img data-v-7f4dda58=\"\" src=\"https://www.gob.mx/cms/uploads/image/file/487056/07_salud-dorado.png\" alt=\"\" class=\"card-img-top card-img-gob\">",
+                                    "target": [
+                                        "a[href$=\"salud\"] > .card-img-top.card-img-gob[alt=\"\"]"
+                                    ]
+                                },
+                                {
+                                    "html": "<h4 data-v-7f4dda58=\"\" class=\"card-title\">\n                                    SALUD\n                                </h4>",
+                                    "target": [
+                                        "a[href$=\"salud\"] > h4"
+                                    ]
+                                },
+                                {
+                                    "html": "<a data-v-7f4dda58=\"\" href=\"https://www.gob.mx/tramites/ficha/cita-medica-en-el-issste-por-telefono-o-internet/ISSSTE1722\" target=\"\u201d_blank\u201d\">Cita m\u00e9dica ISSSTE</a>",
+                                    "target": [
+                                        ".col-sm-6.col-md-6.col-lg-3:nth-child(6) > .card.text-center.card-gob > .card-body > .list-unstyled > li:nth-child(1) > a[target=\"\u201d_blank\u201d\"]"
+                                    ]
+                                },
+                                {
+                                    "html": "<a data-v-7f4dda58=\"\" href=\"https://www.gob.mx/tramites/ficha/atencion-medica-en-unidades-de-medicina-familiar-del-imss/IMSS141\" target=\"\u201d_blank\u201d\">Atenci\u00f3n m\u00e9dica IMSS</a>",
+                                    "target": [
+                                        ".col-sm-6.col-md-6.col-lg-3:nth-child(6) > .card.text-center.card-gob > .card-body > .list-unstyled > li:nth-child(2) > a[target=\"\u201d_blank\u201d\"]"
+                                    ]
+                                },
+                                {
+                                    "html": "<a data-v-7f4dda58=\"\" href=\"https://www.gob.mx/tramites/ficha/actualizacion-de-datos-del-asegurado-a-o-pensionado-a-como-derechohabiente-en-el-imss/IMSS215\" target=\"\u201d_blank\u201d\">Actualiza datos IMSS</a>",
+                                    "target": [
+                                        ".col-sm-6.col-md-6.col-lg-3:nth-child(6) > .card.text-center.card-gob > .card-body > .list-unstyled > li:nth-child(3) > a[target=\"\u201d_blank\u201d\"]"
+                                    ]
+                                },
+                                {
+                                    "html": "<a data-v-7f4dda58=\"\" href=\"https://www.gob.mx/tramites/ficha/consulta-medica-de-primera-vez-en-el-hgm/HGM4823\" target=\"\u201d_blank\u201d\">Consulta en el HGM</a>",
+                                    "target": [
+                                        ".col-sm-6.col-md-6.col-lg-3:nth-child(6) > .card.text-center.card-gob > .card-body > .list-unstyled > li:nth-child(4) > a[target=\"\u201d_blank\u201d\"]"
+                                    ]
+                                },
+                                {
+                                    "html": "<a data-v-7f4dda58=\"\" class=\"btn btn-categorias\">Ver todos &gt;</a>",
+                                    "target": [
+                                        "a[href$=\"salud\"] > .btn-categorias.btn"
+                                    ]
+                                },
+                                {
+                                    "html": "<img data-v-7f4dda58=\"\" src=\"https://www.gob.mx/cms/uploads/image/file/487057/08_economi_a-dorado.png\" alt=\"\" class=\"card-img-top card-img-gob\">",
+                                    "target": [
+                                        "a[href$=\"economia\"] > .card-img-top.card-img-gob[alt=\"\"]"
+                                    ]
+                                },
+                                {
+                                    "html": "<h4 data-v-7f4dda58=\"\" class=\"card-title\">\n                                    ECONOM\u00cdA\n                                </h4>",
+                                    "target": [
+                                        "a[href$=\"economia\"] > h4"
+                                    ]
+                                },
+                                {
+                                    "html": "<a data-v-7f4dda58=\"\" href=\"https://www.gob.mx/tramites/ficha/solicitud-de-registro-de-marca-ante-el-impi/IMPI88\" target=\"\u201d_blank\u201d\">Registro de marca</a>",
+                                    "target": [
+                                        ".col-sm-6.col-md-6.col-lg-3:nth-child(7) > .card.text-center.card-gob > .card-body > .list-unstyled > li:nth-child(1) > a[target=\"\u201d_blank\u201d\"]"
+                                    ]
+                                },
+                                {
+                                    "html": "<a data-v-7f4dda58=\"\" href=\"https://www.gob.mx/tramites/ficha/autorizacion-de-uso-de-denominacion-o-razon-social/SE66\" target=\"\u201d_blank\u201d\">Uso de denominaci\u00f3n</a>",
+                                    "target": [
+                                        ".col-sm-6.col-md-6.col-lg-3:nth-child(7) > .card.text-center.card-gob > .card-body > .list-unstyled > li:nth-child(2) > a[target=\"\u201d_blank\u201d\"]"
+                                    ]
+                                },
+                                {
+                                    "html": "<a data-v-7f4dda58=\"\" href=\"http://www.gob.mx/tramites/ficha/constitucion-de-sociedad-por-acciones-simplificada-sas/SE2568\" target=\"\u201d_blank\u201d\">Abre tu empresa</a>",
+                                    "target": [
+                                        ".col-sm-6.col-md-6.col-lg-3:nth-child(7) > .card.text-center.card-gob > .card-body > .list-unstyled > li:nth-child(3) > a[target=\"\u201d_blank\u201d\"]"
+                                    ]
+                                },
+                                {
+                                    "html": "<a data-v-7f4dda58=\"\" href=\"https://www.gob.mx/tramites/ficha/solicitud-de-credito-fonacot/INFONACOT5483\" target=\"\u201d_blank\u201d\">Cr\u00e9dito FONACOT</a>",
+                                    "target": [
+                                        ".col-sm-6.col-md-6.col-lg-3:nth-child(7) > .card.text-center.card-gob > .card-body > .list-unstyled > li:nth-child(4) > a[target=\"\u201d_blank\u201d\"]"
+                                    ]
+                                },
+                                {
+                                    "html": "<a data-v-7f4dda58=\"\" class=\"btn btn-categorias\">Ver todos &gt;</a>",
+                                    "target": [
+                                        "a[href$=\"economia\"] > .btn-categorias.btn"
+                                    ]
+                                },
+                                {
+                                    "html": "<img data-v-7f4dda58=\"\" src=\"https://www.gob.mx/cms/uploads/image/file/487059/10_territorio-y-vivienda-dorado.png\" alt=\"\" class=\"card-img-top card-img-gob\">",
+                                    "target": [
+                                        "a[href$=\"territorio\"] > .card-img-top.card-img-gob[alt=\"\"]"
+                                    ]
+                                },
+                                {
+                                    "html": "<h4 data-v-7f4dda58=\"\" class=\"card-title\">\n                                    TERRITORIO Y VIVIENDA\n                                </h4>",
+                                    "target": [
+                                        "a[href$=\"territorio\"] > h4"
+                                    ]
+                                },
+                                {
+                                    "html": "<a data-v-7f4dda58=\"\" href=\"https://www.gob.mx/tramites/ficha/actualizacion-del-estado-de-cuenta-del-credito-hipotecario-fovissste/ISSSTE628\" target=\"\u201d_blank\u201d\">Estado cuenta FOVISSSTE</a>",
+                                    "target": [
+                                        ".col-sm-6.col-md-6.col-lg-3:nth-child(8) > .card.text-center.card-gob > .card-body > .list-unstyled > li:nth-child(1) > a[target=\"\u201d_blank\u201d\"]"
+                                    ]
+                                },
+                                {
+                                    "html": "<a data-v-7f4dda58=\"\" href=\"https://www.gob.mx/tramites/ficha/solicitud-de-credito-hipotecario-tradicional-fovissste-mediante-el-sistema-de-puntaje/ISSSTE574\" target=\"\u201d_blank\u201d\">Cr\u00e9dito FOVISSSTE</a>",
+                                    "target": [
+                                        ".col-sm-6.col-md-6.col-lg-3:nth-child(8) > .card.text-center.card-gob > .card-body > .list-unstyled > li:nth-child(2) > a[target=\"\u201d_blank\u201d\"]"
+                                    ]
+                                },
+                                {
+                                    "html": "<a data-v-7f4dda58=\"\" href=\"https://www.gob.mx/tramites/ficha/expedicion-de-titulos-de-propiedad-sobre-parcelas-ante-el-ran/RAN1410\" target=\"\u201d_blank\u201d\">T\u00edtulos de propiedad</a>",
+                                    "target": [
+                                        ".col-sm-6.col-md-6.col-lg-3:nth-child(8) > .card.text-center.card-gob > .card-body > .list-unstyled > li:nth-child(3) > a[target=\"\u201d_blank\u201d\"]"
+                                    ]
+                                },
+                                {
+                                    "html": "<a data-v-7f4dda58=\"\" class=\"btn btn-categorias\">Ver todos &gt;</a>",
+                                    "target": [
+                                        "a[href$=\"territorio\"] > .btn-categorias.btn"
+                                    ]
+                                },
+                                {
+                                    "html": "<img data-v-7f4dda58=\"\" src=\"https://www.gob.mx/cms/uploads/image/file/487060/11_comunicaciones-y-transportes-dorado.png\" alt=\"\" class=\"card-img-top card-img-gob\">",
+                                    "target": [
+                                        "a[href$=\"comunicaciones\"] > .card-img-top.card-img-gob[alt=\"\"]"
+                                    ]
+                                },
+                                {
+                                    "html": "<h4 data-v-7f4dda58=\"\" class=\"card-title\">\n                                    COMUNICACIONES Y TRANSPORTES\n                                </h4>",
+                                    "target": [
+                                        "a[href$=\"comunicaciones\"] > h4"
+                                    ]
+                                },
+                                {
+                                    "html": "<a data-v-7f4dda58=\"\" href=\"https://www.gob.mx/tramites/ficha/expedicion-de-licencia-federal-de-conductor-modalidad-nacional/SCT1100\" target=\"\u201d_blank\u201d\">Licencia federal</a>",
+                                    "target": [
+                                        ".col-sm-6.col-md-6.col-lg-3:nth-child(9) > .card.text-center.card-gob > .card-body > .list-unstyled > li:nth-child(1) > a[target=\"\u201d_blank\u201d\"]"
+                                    ]
+                                },
+                                {
+                                    "html": "<a data-v-7f4dda58=\"\" href=\"https://www.gob.mx/tramites/ficha/reposicion-de-tarjeta-de-circulacion-o-placas-metalicas-de-identificacion/SCT1438\" target=\"\u201d_blank\u201d\">Tarjeta de circulaci\u00f3n</a>",
+                                    "target": [
+                                        ".col-sm-6.col-md-6.col-lg-3:nth-child(9) > .card.text-center.card-gob > .card-body > .list-unstyled > li:nth-child(2) > a[target=\"\u201d_blank\u201d\"]"
+                                    ]
+                                },
+                                {
+                                    "html": "<a data-v-7f4dda58=\"\" href=\"http://www.gob.mx/tramites/ficha/envio-de-dinero-a-traves-de-un-giro-telegrafico-nacional/TELECOMM1821\" target=\"\u201d_blank\u201d\">Env\u00edo de dinero</a>",
+                                    "target": [
+                                        ".col-sm-6.col-md-6.col-lg-3:nth-child(9) > .card.text-center.card-gob > .card-body > .list-unstyled > li:nth-child(3) > a[target=\"\u201d_blank\u201d\"]"
+                                    ]
+                                },
+                                {
+                                    "html": "<a data-v-7f4dda58=\"\" href=\"https://www.gob.mx/tramites/ficha/mensajeria-y-paqueteria-mexpost-con-destino-internacional/SEPOMEX6014\" target=\"\u201d_blank\u201d\">Paqueter\u00eda MEXPOST</a>",
+                                    "target": [
+                                        ".col-sm-6.col-md-6.col-lg-3:nth-child(9) > .card.text-center.card-gob > .card-body > .list-unstyled > li:nth-child(4) > a[target=\"\u201d_blank\u201d\"]"
+                                    ]
+                                },
+                                {
+                                    "html": "<a data-v-7f4dda58=\"\" class=\"btn btn-categorias\">Ver todos &gt;</a>",
+                                    "target": [
+                                        "a[href$=\"comunicaciones\"] > .btn-categorias.btn"
+                                    ]
+                                },
+                                {
+                                    "html": "<img data-v-7f4dda58=\"\" src=\"https://www.gob.mx/cms/uploads/image/file/487061/12_programas-sociales-dorado.png\" alt=\"\" class=\"card-img-top card-img-gob\">",
+                                    "target": [
+                                        "a[href$=\"programas\"] > .card-img-top.card-img-gob[alt=\"\"]"
+                                    ]
+                                },
+                                {
+                                    "html": "<h4 data-v-7f4dda58=\"\" class=\"card-title\">\n                                    PROGRAMAS SOCIALES\n                                </h4>",
+                                    "target": [
+                                        "a[href$=\"programas\"] > h4"
+                                    ]
+                                },
+                                {
+                                    "html": "<a data-v-7f4dda58=\"\" href=\"https://www.gob.mx/tramites/ficha/incorporacion-al-programa-pension-para-adultos-mayores/BIENESTAR61\" target=\"\u201d_blank\u201d\">Pensi\u00f3n</a>",
+                                    "target": [
+                                        ".col-sm-6.col-md-6.col-lg-3:nth-child(10) > .card.text-center.card-gob > .card-body > .list-unstyled > li:nth-child(1) > a[target=\"\u201d_blank\u201d\"]"
+                                    ]
+                                },
+                                {
+                                    "html": "<a data-v-7f4dda58=\"\" href=\"https://www.gob.mx/tramites/ficha/credencial-nacional-para-personas-con-discapacidad/DIF5939\" target=\"\u201d_blank\u201d\">Personas con discapacidad</a>",
+                                    "target": [
+                                        ".col-sm-6.col-md-6.col-lg-3:nth-child(10) > .card.text-center.card-gob > .card-body > .list-unstyled > li:nth-child(2) > a[target=\"\u201d_blank\u201d\"]"
+                                    ]
+                                },
+                                {
+                                    "html": "<a data-v-7f4dda58=\"\" href=\"https://www.gob.mx/tramites/ficha/servicios-de-atencion-medica-en-el-inapam/INAPAM2793\" target=\"\u201d_blank\u201d\">Atenci\u00f3n m\u00e9dica INAPAM</a>",
+                                    "target": [
+                                        ".col-sm-6.col-md-6.col-lg-3:nth-child(10) > .card.text-center.card-gob > .card-body > .list-unstyled > li:nth-child(3) > a[target=\"\u201d_blank\u201d\"]"
+                                    ]
+                                },
+                                {
+                                    "html": "<a data-v-7f4dda58=\"\" class=\"btn btn-categorias\">Ver todos &gt;</a>",
+                                    "target": [
+                                        "a[href$=\"programas\"] > .btn-categorias.btn"
+                                    ]
+                                },
+                                {
+                                    "html": "<img data-v-7f4dda58=\"\" src=\"https://www.gob.mx/cms/uploads/image/file/487064/15_turismo-dorado.png\" alt=\"\" class=\"card-img-top card-img-gob\">",
+                                    "target": [
+                                        "a[href$=\"turismo\"] > .card-img-top.card-img-gob[alt=\"\"]"
+                                    ]
+                                },
+                                {
+                                    "html": "<h4 data-v-7f4dda58=\"\" class=\"card-title\">\n                                    TURISMO\n                                </h4>",
+                                    "target": [
+                                        "a[href$=\"turismo\"] > h4"
+                                    ]
+                                },
+                                {
+                                    "html": "<a data-v-7f4dda58=\"\" href=\"https://www.gob.mx/tramites/ficha/acreditacion-de-guia-de-turistas/SECTUR3121\" target=\"\u201d_blank\u201d\">Gu\u00eda de turistas</a>",
+                                    "target": [
+                                        ".col-sm-6.col-md-6.col-lg-3:nth-child(11) > .card.text-center.card-gob > .card-body > .list-unstyled > li:nth-child(1) > a[target=\"\u201d_blank\u201d\"]"
+                                    ]
+                                },
+                                {
+                                    "html": "<a data-v-7f4dda58=\"\" href=\"https://www.gob.mx/tramites/ficha/inscribete-al-registro-nacional-de-turismo/SECTUR3109\" target=\"\u201d_blank\u201d\">Registro Nacional de Turismo</a>",
+                                    "target": [
+                                        ".col-sm-6.col-md-6.col-lg-3:nth-child(11) > .card.text-center.card-gob > .card-body > .list-unstyled > li:nth-child(2) > a[target=\"\u201d_blank\u201d\"]"
+                                    ]
+                                },
+                                {
+                                    "html": "<a data-v-7f4dda58=\"\" href=\"https://www.gob.mx/tramites/ficha/servicios-integrales-de-turismo-en-turissste/ISSSTE879\" target=\"\u201d_blank\u201d\">TURISSSTE</a>",
+                                    "target": [
+                                        ".col-sm-6.col-md-6.col-lg-3:nth-child(11) > .card.text-center.card-gob > .card-body > .list-unstyled > li:nth-child(3) > a[target=\"\u201d_blank\u201d\"]"
+                                    ]
+                                },
+                                {
+                                    "html": "<a data-v-7f4dda58=\"\" class=\"btn btn-categorias\">Ver todos &gt;</a>",
+                                    "target": [
+                                        "a[href$=\"turismo\"] > .btn-categorias.btn"
+                                    ]
+                                },
+                                {
+                                    "html": "<img data-v-7f4dda58=\"\" src=\"https://www.gob.mx/cms/uploads/image/file/487065/16_Otros-tra_mites-dorado.png\" alt=\"\" class=\"card-img-top card-img-gob\">",
+                                    "target": [
+                                        "a[target=\"\u201d_blank\u201d\"] > .card-img-top.card-img-gob[alt=\"\"]"
+                                    ]
+                                },
+                                {
+                                    "html": "<h4 data-v-7f4dda58=\"\" class=\"card-title\">\n                                    A &gt; Z\n                                </h4>",
+                                    "target": [
+                                        "a[target=\"\u201d_blank\u201d\"] > h4"
+                                    ]
+                                },
+                                {
+                                    "html": "<a data-v-7f4dda58=\"\" href=\"/tramites/otros\" class=\"\">\n                                        Otros tr\u00e1mites\n                                    </a>",
+                                    "target": [
+                                        "li > a[href$=\"otros\"]"
+                                    ]
+                                },
+                                {
+                                    "html": "<a data-v-7f4dda58=\"\" href=\"https://www.gob.mx/busqueda?utf8=%E2%9C%93\" target=\"_blank\" class=\"btn btn-categorias\">Ver todos &gt;</a>",
+                                    "target": [
+                                        ".btn-categorias.btn[target=\"_blank\"]"
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks",
+                    "html": "<html lang=\"en\">",
+                    "impact": "moderate",
+                    "none": [],
+                    "target": [
+                        "html"
+                    ]
+                }
+            ],
+            "tags": [
+                "cat.keyboard",
+                "best-practice"
+            ]
+        }
+    ],
+    "recommendations": {
+        "aria-allowed-role": "Para mejorar esta recomendaci\u00f3n y corregir la violaci\u00f3n de accesibilidad relacionada con el atributo de rol (`role`) con un valor inapropiado, es importante seguir los siguientes pasos:\n\n1. **Revisar la documentaci\u00f3n oficial de roles de WAI-ARIA:** Es fundamental comprender los roles y su uso adecuado seg\u00fan las pautas de WAI-ARIA (Web Accessibility Initiative - Accessible Rich Internet Applications). Aseg\u00farate de asignar roles que describan correctamente la funci\u00f3n del elemento en la interfaz.\n\n2. **Verificar la sem\u00e1ntica del elemento:** Antes de asignar un valor al atributo de rol, aseg\u00farate de que el elemento HTML tenga la sem\u00e1ntica correcta. Utiliza elementos HTML nativos apropiados siempre que sea posible en lugar de depender exclusivamente de los roles de WAI-ARIA.\n\n3. **Agregar roles de forma coherente:** Asigna roles que sean coherentes con la funci\u00f3n y el comportamiento del elemento. Evita asignar roles que puedan resultar confusos para los usuarios de tecnolog\u00edas de asistencia.\n\n4. **Probar la accesibilidad:** Realiza pruebas de accesibilidad utilizando herramientas como lectores de pantalla y validadores de accesibilidad para garantizar que los roles se utilicen de manera adecuada y que mejoren la experiencia de usuario.\n\n5. **Capacitaci\u00f3n y seguimiento:** Ofrece capacitaci\u00f3n a los desarrolladores y equipos responsables de la accesibilidad web sobre el uso adecuado de roles en WAI-ARIA. Realiza un seguimiento regular para garantizar que se sigan las mejores pr\u00e1cticas de accesibilidad.\n\nAl seguir estos pasos y asegurarse de que los roles se utilicen adecuadamente y de forma coherente con las pautas de accesibilidad, se puede mejorar significativamente la accesibilidad de un sitio web.",
+        "duplicate-id-active": "Para resolver la violaci\u00f3n de accesibilidad relacionada con asegurar que cada identificador (id) de los elementos activos sea \u00fanico, puedes seguir estos pasos:\n\n1. **Identificar elementos activos repetidos:** Revisa tu c\u00f3digo para identificar todos los elementos activos que tienen los mismos valores de atributo id.\n\n2. **Modificar los identificadores duplicados:** Cambia los valores de los atributos id para hacer que cada uno sea \u00fanico. Puedes agregar prefijos o sufijos para lograr esto de manera sencilla.\n\n3. **Actualizar el c\u00f3digo HTML y JavaScript:** Una vez que hayas modificado los identificadores duplicados, aseg\u00farate de actualizar cualquier referencia a estos elementos en tu c\u00f3digo HTML y JavaScript. Aseg\u00farate de que estas referencias ahora apunten a los identificadores \u00fanicos correspondientes.\n\n4. **Realizar pruebas de accesibilidad:** Despu\u00e9s de realizar estos cambios, es importante realizar pruebas de accesibilidad para asegurarte de que la violaci\u00f3n se ha resuelto correctamente. Puedes utilizar herramientas de evaluaci\u00f3n de accesibilidad o realizar pruebas manuales para verificar que los identificadores de los elementos activos son ahora \u00fanicos y que no hay nuevas violaciones de accesibilidad.\n\nAl corregir esta violaci\u00f3n de accesibilidad, est\u00e1s ayudando a garantizar que todos los usuarios, incluidas las personas con discapacidades, puedan acceder y utilizar tu contenido en l\u00ednea de manera efectiva.",
+        "duplicate-id": "Para corregir la violaci\u00f3n de accesibilidad relacionada con el hecho de que cada valor del atributo \"id\" debe ser \u00fanico, se deben seguir las siguientes recomendaciones:\n\n1. **Identificar y corregir duplicados**: Revisar el c\u00f3digo HTML para identificar cualquier instancia donde se est\u00e9n utilizando valores de atributo \"id\" duplicados. Cada elemento en el documento debe tener un identificador \u00fanico.\n\n2. **Seleccionar nombres descriptivos**: Al asignar valores a los atributos \"id\", es preferible utilizar nombres descriptivos que reflejen la funci\u00f3n o el contenido del elemento. Esto facilita la identificaci\u00f3n y la referencia a los elementos espec\u00edficos en el documento.\n\n3. **Generar identificadores \u00fanicos**: En caso de que sea necesario generar identificadores de forma din\u00e1mica (por ejemplo, en aplicaciones web), asegurarse de que los identificadores generados sean \u00fanicos y no entren en conflicto con otros elementos en la p\u00e1gina.\n\n4. **Utilizar roles y etiquetas ARIA**: En casos donde no sea posible corregir la duplicaci\u00f3n de identificadores, se pueden utilizar roles y atributos ARIA (Accessible Rich Internet Applications) para proporcionar etiquetas adicionales que ayuden a identificar los elementos de manera \u00fanica y accesible para tecnolog\u00edas de asistencia.\n\nAl seguir estas recomendaciones, se garantiza que los elementos en el documento tengan identificadores \u00fanicos, lo cual es fundamental para el correcto funcionamiento de tecnolog\u00edas de asistencia y para mejorar la accesibilidad de la p\u00e1gina web.",
+        "heading-order": "Para corregir esta violaci\u00f3n de accesibilidad y garantizar que el orden de los encabezados sea sem\u00e1nticamente correcto, se deben seguir las siguientes recomendaciones:\n\n1. **Jerarqu\u00eda de encabezados:** Aseg\u00farate de que los encabezados en tu contenido web sigan una estructura jer\u00e1rquica adecuada. Esto significa que los encabezados de nivel 1 (`<h1>`), seguidos por los de nivel 2 (`<h2>`), luego por los de nivel 3 (`<h3>`), y as\u00ed sucesivamente, deben estar organizados de manera coherente y l\u00f3gica.\n\n2. **No saltarse niveles:** Evita saltarte niveles en la jerarqu\u00eda de encabezados. Por ejemplo, no vayas de `<h2>` a `<h4>` sin utilizar un `<h3>`. Esto puede confundir a los usuarios que dependen de la estructura de encabezados para navegar por tu contenido.\n\n3. **Uso apropiado de encabezados:** Aseg\u00farate de que los encabezados se utilicen de manera significativa y representen correctamente la estructura y el contenido de la p\u00e1gina. Los encabezados deben ser descriptivos y relevantes para el contenido que encabezan.\n\n4. **Marcado sem\u00e1ntico:** Utiliza los elementos de encabezado HTML (`<h1>`, `<h2>`, `<h3>`, etc.) de acuerdo con su prop\u00f3sito sem\u00e1ntico en lugar de simplemente cambiar el tama\u00f1o y el estilo del texto. Esto ayudar\u00e1 a los usuarios a comprender la estructura y el contenido de la p\u00e1gina de manera m\u00e1s clara.\n\n5. **Revisi\u00f3n constante:** Realiza revisiones peri\u00f3dicas del orden de los encabezados en tu contenido web para asegurarte de que sigan siendo relevantes y coherentes. A medida que se actualiza y modifica el contenido, es importante mantener la coherencia en la estructura de los encabezados.\n\nSiguiendo estas recomendaciones, podr\u00e1s mejorar la accesibilidad de tu sitio web asegur\u00e1ndote de que el orden de los encabezados sea sem\u00e1nticamente correcto y beneficie a todos los usuarios, incluidos aquellos que dependen de la estructura de encabezados para navegar por tu contenido.",
+        "landmark-one-main": "Para resolver esta violaci\u00f3n de accesibilidad y asegurarse de que la p\u00e1gina y los iframes cumplan con las pautas de accesibilidad, puedes seguir estos consejos:\n\n1. **Identificar y corregir los landmarks incorrectos:** Revisa la estructura de la p\u00e1gina y los iframes para asegurarte de que solo hay un landmark principal definido para la p\u00e1gina en s\u00ed y para cada iframe. Utiliza atributos como `role=\"main\"` y `role=\"contentinfo\"` para identificar los landmarks de manera adecuada.\n\n2. **Eliminar landmarks innecesarios:** Si hay landmarks adicionales que no son necesarios, como landmarks m\u00faltiples en un iframe, elim\u00ednalos o aj\u00fastalos seg\u00fan sea necesario para que cumplan con la gu\u00eda de tener solo un landmark principal por p\u00e1gina y por iframe.\n\n3. **Utilizar ARIA landmarks de manera efectiva:** Utiliza atributos ARIA landmarks como `role=\"main\"`, `role=\"complementary\"`, `role=\"contentinfo\"`, etc., de manera adecuada para ayudar a los usuarios a navegar y comprender la estructura de la p\u00e1gina y los iframes.\n\n4. **Probar la accesibilidad:** Una vez realizados los ajustes, realiza pruebas de accesibilidad utilizando herramientas de evaluaci\u00f3n de sitios web y tambi\u00e9n realiza pruebas manuales para verificar que la p\u00e1gina y los iframes cumplan con las pautas de accesibilidad, incluyendo tener solo un landmark principal por p\u00e1gina y por iframe.\n\nAl seguir estos pasos, podr\u00e1s mejorar la accesibilidad de la p\u00e1gina y garantizar que cumpla con el requisito de tener un \u00fanico landmark principal por p\u00e1gina y por iframe, lo que facilitar\u00e1 la navegaci\u00f3n y comprensi\u00f3n para todos los usuarios, incluidas aquellas personas con discapacidades.",
+        "link-name": "Para asegurar que los enlaces tengan un texto discernible y cumplan con las pautas de accesibilidad de acuerdo con el WCAG, se pueden seguir las siguientes recomendaciones:\n\n1. **Utilizar texto descriptivo:** El texto de los enlaces debe ser descriptivo y relevante al contenido al que lleva. Evita usar frases gen\u00e9ricas como \"clic aqu\u00ed\" o \"leer m\u00e1s\". En su lugar, utiliza texto que describa claramente el destino del enlace.\n\n2. **Evitar enlaces vac\u00edos:** Aseg\u00farate de que los enlaces no tengan solo im\u00e1genes o iconos sin texto asociado. Incluir solo una imagen como enlace dificulta la comprensi\u00f3n para personas con discapacidad visual que utilizan lectores de pantalla.\n\n3. **Utilizar etiquetas claras:** Si es necesario utilizar un enlace con una etiqueta gen\u00e9rica, aseg\u00farate de que haya un contexto claro que explique a d\u00f3nde lleva el enlace. Por ejemplo, si tienes un enlace con el texto \"M\u00e1s informaci\u00f3n\", aseg\u00farate de que haya un texto cercano que explique de qu\u00e9 se trata esa informaci\u00f3n adicional.\n\n4. **Contraste adecuado:** Aseg\u00farate de que el color del texto del enlace tenga un contraste suficiente con el fondo en el que se encuentra. De esta manera, las personas con problemas de visi\u00f3n podr\u00e1n diferenciar claramente los enlaces del resto del contenido.\n\n5. **Pruebas de accesibilidad:** Utiliza herramientas de verificaci\u00f3n de accesibilidad para asegurarte de que los enlaces son detectables y comprensibles para todos los usuarios, como lectores de pantalla.\n\nSiguiendo estas recomendaciones, garantizar\u00e1s que los enlaces de tu sitio web tengan un texto discernible y cumplan con los est\u00e1ndares de accesibilidad establecidos en el WCAG.",
+        "list": "Para garantizar que las listas est\u00e9n estructuradas correctamente y cumplan con las pautas de accesibilidad, se pueden seguir las siguientes recomendaciones:\n\n1. **Usar etiquetas sem\u00e1nticas:** Utilizar las etiquetas HTML adecuadas para marcar las listas de contenido. Por ejemplo, utilizar `<ul>` para listas desordenadas y `<ol>` para listas ordenadas.\n\n2. **Incluir etiquetas de elemento de lista:** Cada elemento en la lista debe estar correctamente marcado con `<li>` para identificarlo como parte de la lista.\n\n3. **Evitar listas anidadas excesivas:** Mantener las listas anidadas al m\u00ednimo para facilitar la comprensi\u00f3n de la estructura de la lista.\n\n4. **Utilizar atributos ARIA si es necesario:** Si el contenido de la lista es din\u00e1mico o interactivo, considerar el uso de atributos ARIA como `role=\"list\"` y `role=\"listitem\"` para mejorar la accesibilidad.\n\n5. **Probar con herramientas de evaluaci\u00f3n de accesibilidad:** Utilizar herramientas como evaluadores autom\u00e1ticos de accesibilidad para identificar posibles problemas en la estructura de las listas y corregirlos.\n\nAl seguir estas recomendaciones, se asegurar\u00e1 de que las listas en su contenido est\u00e9n estructuradas correctamente y sean accesibles para todos los usuarios, incluidas aquellas personas con discapacidades que puedan depender de la estructura adecuada de las listas para navegar por el contenido.",
+        "region": "Para mejorar la violaci\u00f3n de accesibilidad relacionada con asegurar que todo el contenido de la p\u00e1gina est\u00e9 contenido por hitos (landmarks), puedes seguir los siguientes pasos:\n\n1. Utiliza hitos sem\u00e1nticos HTML como `<header>`, `<nav>`, `<main>`, `<aside>`, `<footer>`, `<article>`, `<section>`, y `<aside>` para estructurar tu p\u00e1gina web de manera clara.\n\n2. Aseg\u00farate de que cada secci\u00f3n de tu p\u00e1gina est\u00e9 correctamente envuelta en el hito sem\u00e1ntico correspondiente. Por ejemplo, el encabezado del sitio debe estar dentro de `<header>`, la navegaci\u00f3n principal dentro de `<nav>`, etc.\n\n3. Utiliza etiquetas `<div>` y clases de CSS de manera adecuada y consistente para asignar estilos y dise\u00f1o a tus hitos sem\u00e1nticos, sin comprometer la estructura de tus hitos.\n\n4. Verifica que tu p\u00e1gina no contenga elementos hu\u00e9rfanos que no est\u00e9n incluidos dentro de hitos adecuados.\n\n5. Utiliza herramientas de validaci\u00f3n automatizada como navegadores con inspectores de accesibilidad integrados, extensiones de Chrome/Firefox como Axe, WAVE o Lighthouse, o validadores de WCAG en l\u00ednea para identificar problemas de hitos faltantes en tu sitio web.\n\nAl asegurarte de que todo el contenido de tu p\u00e1gina est\u00e9 contenido por hitos sem\u00e1nticos apropiados, estar\u00e1s mejorando significativamente la usabilidad y accesibilidad de tu sitio web para usuarios con discapacidades y dispositivos de asistencia."
+    },
+    "score": 8
+}
