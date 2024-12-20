@@ -26,18 +26,20 @@ def wcag_recommendation(req: func.HttpRequest) -> func.HttpResponse:
 
         # Descargar el JSON desde el contenedor 'wcag-reports'
         logging.info(f"Downloading JSON from blob: {report_id}.json")
-        violations = get_json_from_blob(report_id)
+        blob_data = get_json_from_blob(report_id)
 
-        # Validar el contenido del JSON descargado
-        if not violations.get("violations"):
+        # Validar que exista el campo "data" y "violations" en el JSON descargado
+        if not blob_data.get("data") or not blob_data["data"].get("violations"):
             return func.HttpResponse(
-                "The blob must contain a 'violations' field with valid data.",
+                "The blob must contain a 'data' field with a 'violations' field containing valid data.",
                 status_code=400
             )
 
+        violations = blob_data["data"]["violations"]
+
         # Generar recomendaciones basadas en las violaciones
         logging.info("Generating recommendations using GPT...")
-        recommendations = get_recommendations(violations["violations"])
+        recommendations = get_recommendations(violations)
 
         # Guardar las recomendaciones en el contenedor 'wcag-recommendations'
         logging.info(f"Saving recommendations to blob: {report_id}_recommendations.json")

@@ -16,34 +16,48 @@ client = AzureOpenAI(
 def get_recommendations(violations):
     recommendations = {}
     context = """
-    You are an expert in WCAG (Web Content Accessibility Guidelines) norms. Your role is to assist in providing detailed, actionable, and WCAG-compliant recommendations for improving web accessibility. 
-    All suggestions must be practical, specific to the violation described, and implementable within this project.
-    Do not redirect to external accessibility services, tools, or resources; focus exclusively on addressing the violations using WCAG-compliant methods.
-    Your recommendations will be used as part of an automated WCAG-audit project.
+    You are an expert in WCAG (Web Content Accessibility Guidelines) norms. Your role is to assist both technical and non-technical audiences by providing clear, actionable, and WCAG-compliant recommendations for improving web accessibility.  
+
+    Your suggestions must:
+    1. Be practical, specific to the described violation, and implementable within a web development context.
+    2. Use a formal tone, avoiding technical jargon when unnecessary to ensure clarity for all audiences.  
+    3. Provide code examples only when essential for clarity, while avoiding detailed implementation instructions.  
+    4. Focus solely on addressing the violations using WCAG-compliant methods. Do not reference or redirect to external services, tools, or resources.  
+    5. Instead of simply addressing the use of WCAG guidelines, explicitly describe the specific WCAG guidelines that are relevant to the violation and explain their significance in resolving the issue.
+    
+    You are part of a proprietary tool designed to provide these recommendations directly. You must not mention or rely on external tools or resources, as your guidance will form the core of this system’s functionality.  
+
+    Your recommendations will contribute to an automated WCAG-audit project. Ensure they address the most relevant WCAG criteria effectively while maintaining accessibility for all user groups.  
     """
 
     for violation in violations:
         # Generar el prompt con los detalles de la violación
         prompt = f"""
         The following violation was detected during a WCAG audit:
-        Violation ID: {violation['suggested_fix']}
+        Violation ID: {violation.get('suggested_fix', 'No ID')}
         Description: {violation['description']}
         Impact: {violation.get('impact', 'not specified')}
-        Nodes affected: {len(violation.get('affected_nodes', []))} elements.
-        Based on the WCAG normatives, provide specific recommendations to address this violation.
+        Number of affected nodes: {violation['nodes']}.
+        Based on the WCAG guidelines, provide specific recommendations to address this violation.
 
         Your response must be in the form:
         recommendation: [Your recommendation here]
         """
 
-        # Realizar la llamada a la API de OpenAI para obtener la recomendación
-        response = client.chat.completions.create(
-            model="gpt-35-turbo", 
-            messages=[{"role": "system", "content": context}, 
-                      {"role": "user", "content": prompt}]
-        )
+        try:
+            response = client.chat.completions.create(
+                model="gpt-35-turbo",  
+                messages=[
+                    {"role": "system", "content": context},
+                    {"role": "user", "content": prompt}
+                ]
+            )
+            # Extraer y guardar la recomendación
+            recommendation = response.choices[0].message.content.strip()
+            recommendations[violation.get('suggested_fix', 'No ID')] = recommendation
 
-        # Añadir las recomendaciones específicas de la violación
-        recommendations[violation['id']] = response.choices[0].message.content.strip()
+        except Exception as e:
+            error = f"Error processing violation {violation.get('suggested_fix', 'No ID')}: {e}"
+            recommendations[violation.get('suggested_fix', 'No ID')] = f"Error generating recommendation: {error}"
 
     return recommendations
