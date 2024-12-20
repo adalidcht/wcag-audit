@@ -16,7 +16,11 @@ It is an artificial intelligence solution designed to help website owners improv
 
 With **Puentes Accesibles**, website owners can quickly and efficiently optimize accessibility, ensuring their pages are accessible to all users, regardless of their abilities.
 
+## HackBox
+https://hackbox.microsoft.com/hackathons/Innovation-Challenge-December-2024/project/86111
 
+## Canva
+https://www.canva.com/design/DAGZ305D5Zc/HYXcU79EYS-XeAS0Vi_mUQ/edit?utm_content=DAGZ305D5Zc&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
 
 
 ## Video Inspiracion
