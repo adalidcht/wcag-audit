@@ -1,0 +1,4 @@
+{
+    "aria-allowed-role": "recommendation: Ensure that the `role` attribute is only used with appropriate and valid values according to the WAI-ARIA specification. Avoid using non-standard roles or roles that do not provide semantic meaning to the element. Review and update the `role` attribute values for the affected elements to comply with WCAG guidelines.",
+    "color-contrast": "recommendation: Increase the color contrast between text and background by ensuring that the contrast ratio meets the WCAG standard. For normal text, the contrast ratio should be at least 4.5:1. For large text (18pt or 14pt bold and larger), the ratio should be at least 3:1. Make sure to use tools like color contrast checkers to verify and adjust colors accordingly."
+}

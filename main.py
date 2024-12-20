@@ -51,24 +51,41 @@ def analyze_accessibility(url):
 # Función para obtener recomendaciones de OpenAI
 def get_recommendations(violations):
     recommendations = {}
+    # Contexto sólido para enmarcar las respuestas
     context = """
-    You are a expert in WCAG normatives.
+    You are an expert in WCAG (Web Content Accessibility Guidelines) norms. Your role is to assist in providing detailed, actionable, and WCAG-compliant recommendations for improving web accessibility. 
+    All suggestions must be practical, specific to the violation described, and implementable within this project.
+    Do not redirect to external accessibility services, tools, or resources; focus exclusively on addressing the violations using WCAG-compliant methods.
+    Your recommendations will be used as part of an automated WCAG-audit project.
     """
+
     for violation in violations:
+        # Prompt claro y dirigido a cada violación
         prompt = f"""
-        Recomendación para la violación de accesibilidad: {violation['description']}. ¿Cómo se puede mejorar?
+        The following violation was detected during a WCAG audit:
+        Violation ID: {violation['id']}
+        Description: {violation['description']}
+        Impact: {violation.get('impact', 'not specified')}
+        Nodes affected: {len(violation.get('nodes', []))} elements.
+
+        Based on the WCAG normatives, provide specific recommendations to address this violation.
+        Your response must be direct, actionable, and relevant to the WCAG-audit project.
         """
+
+        # Generar respuesta con GPT
         response = client.chat.completions.create(
-        model="gpt-35-turbo", 
-        messages=[
-            {"role": "system", "content": f"{context}"},
-            {"role": "user", "content": f"{prompt}"}
+            model="gpt-35-turbo", 
+            messages=[
+                {"role": "system", "content": context},
+                {"role": "user", "content": prompt}
             ]
         )
-    
+
+        # Guardar la recomendación
         recommendations[violation['id']] = response.choices[0].message.content
 
     return recommendations
+
 
 # Función para guardar los resultados en Azure Blob Storage
 def save_to_blob_storage(filename, data):
