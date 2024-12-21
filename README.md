@@ -1,82 +1,16 @@
-# Accessibility Backend Project
+# Puentes Accesibles
+It is an artificial intelligence solution designed to help website owners improve the accessibility of their pages, ensuring compliance with WCAG (Web Content Accessibility Guidelines).
 
-This project is an accessibility analysis backend service built with Node.js and Express. It allows users to submit URLs for accessibility scanning and generates reports based on the findings.
+## We Offer
 
-## Table of Contents
+- Automatic website scanning to identify accessibility barriers.
+- Intelligent detection of accessibility issues, ensuring compliance with digital accessibility regulations.
+- Detailed WCAG compliance reports to assess the state of web accessibility and areas for improvement.
 
-- [Installation](#installation)
-- [Usage](#usage)
-- [Endpoints](#endpoints)
-- [Technologies Used](#technologies-used)
+## Objectives
 
-## Installation
+- Facilitate compliance with accessibility regulations through an automated and easy-to-implement process.
+- Enhance the digital experience for people with disabilities, ensuring all users can effectively access the content.
+- Promote technological inclusion by helping website owners create more inclusive and accessible digital environments for everyone.
 
-1. Clone the repository:
-   ```
-   git clone <repository-url>
-   cd accessibility-backend
-   ```
-
-2. Install the dependencies:
-   ```
-   npm install
-   ```
-
-3. Create a `.env` file in the root directory and specify the desired port (optional):
-   ```
-   PORT=3000
-   ```
-
-## Usage
-
-To start the server, run:
-```
-npm run dev
-```
-This will start the server using Nodemon, which automatically restarts the server on file changes.
-
-## Uso de Credenciales para Configuración
-
-Para el correcto funcionamiento del proyecto, es necesario configurar las credenciales correspondientes en el archivo `.env`. Asegúrese de proporcionar las credenciales del servicio que esté utilizando. Las variables requeridas son:
-
-```env
-BLOB_CONNECTION_STRING="Blobstorage Key"
-AZURE_DOCUMENT_KEY=<CLAVE_DEL_SERVICIO_AZURE_DOCUMENT>
-```
-
-### Notas Importantes
-
-1. **BLOB_CONNECTION_STRING**: Debe contener la cadena de conexión para su cuenta de almacenamiento de Azure Blob. Reemplace `<NOMBRE_DEL_SERVICIO_BLOB>` con el nombre de su cuenta de Blob y `<CLAVE_DEL_SERVICIO_BLOB>` con la clave correspondiente.
-
-2. **AZURE_DOCUMENT_KEY**: Reemplace `<CLAVE_DEL_SERVICIO_AZURE_DOCUMENT>` con la clave proporcionada para su servicio de documentos de Azure.
-
-> **Nota:** Estas credenciales son sensibles y no deben ser compartidas ni incluidas en el control de versiones. Se recomienda agregarlas al archivo `.gitignore` y almacenar una copia segura en un sistema de gestión de secretos si es necesario.
-
-
-
-## Endpoints
-
-- **POST /api/analyze**
-  - Description: Analyzes the provided URL for accessibility issues.
-  - Request Body: 
-    ```json
-    {
-      "url": "https://example.com"
-    }
-    ```
-  - Response: Returns a JSON object with the analysis results or an error message if the URL is invalid.
-
-## Technologies Used
-
-- Node.js
-- Express
-- CORS
-- dotenv
-- body-parser
-- Puppeteer
-- axe-core
-- PDFKit
-
-## License
-
-This project is licensed under the MIT License.
+With **Puentes Accesibles**, website owners can quickly and efficiently optimize accessibility, ensuring their pages are accessible to all users, regardless of their abilities.
