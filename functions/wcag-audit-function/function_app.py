@@ -47,7 +47,7 @@ def wcag_recommendation(req: func.HttpRequest) -> func.HttpResponse:
 
         # Devolver solo el nombre del blob guardado
         return func.HttpResponse(
-            json.dumps({"recommendation_blob_name": recommendation_blob_name}),
+            json.dumps(recommendations),
             mimetype="application/json",
             status_code=200
         )
