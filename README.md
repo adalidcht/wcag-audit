@@ -23,3 +23,5 @@ With **Puentes Accesibles**, website owners can quickly and efficiently optimize
 
 ## Presentation
 [Puentes Accesibles Presentation PDF](https://github.com/adalidcht/wcag-audit/blob/main/Puentes-Accesibles.pdf)
+[Puentes Accesibles Presentation pptx](https://github.com/adalidcht/wcag-audit/blob/main/puentes-accesibles.pptx)
+
