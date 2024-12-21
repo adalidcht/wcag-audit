@@ -19,7 +19,7 @@ With **Puentes Accesibles**, website owners can quickly and efficiently optimize
 [Hackbox - Innovation Challenge December 2024 Project](https://hackbox.microsoft.com/hackathons/Innovation-Challenge-December-2024/project/86460)
 
 ## Youtube Presentation
-[Puentes Accesibles Video Presentation](https://youtu.be/OSvt7G3K-mQ)
+[Puentes Accesibles Video Presentation](https://youtu.be/lvwQtm9O-VU)
 
 ## Presentation
 [Puentes Accesibles Presentation PDF](https://github.com/adalidcht/wcag-audit/blob/main/Puentes-Accesibles.pdf)
